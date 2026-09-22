@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-PT" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,52 +8,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen flex flex-col justify-between text-gray-800">
+<body class="min-h-screen flex flex-col justify-between text-gray-800 overflow-x-hidden">
 
-    
     <!-- HEADER / NAVBAR -->
     <header class="w-full bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b-4 border-yellow-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo ajustada para não colar no menu -->
-            <div class="flex items-center space-x-2 mr-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
                 <span class="text-3xl animate-bounce">🐔</span>
                 <span class="title-font text-2xl tracking-wider text-amber-600">CHICKEN <span class="text-rose-500">WARS</span></span>
             </div>
-            <!-- Menu central -->
+            
+            <!-- Menu central (Apenas em Desktop) -->
             <nav class="hidden md:flex space-x-6 text-base font-bold text-gray-700">
                 <a href="#sobre" class="hover:text-rose-500 transition">O Jogo</a>
                 <a href="#lore" class="hover:text-rose-500 transition">A História</a>
                 <a href="#modos" class="hover:text-rose-500 transition">Modos de Batalha</a>
                 <a href="#apoiadores" class="hover:text-rose-500 transition">Seja Apoiador 💛</a>
             </nav>
-            <!-- Botões padronizados e do mesmo tamanho -->
-            <div class="flex items-center gap-3">
-                <button id="eggButton" onclick="hatchEgg()" class="bg-rose-500 text-white title-font px-4 py-3 rounded-2xl hover:bg-rose-600 transition inline-flex items-center justify-center gap-2 cursor-pointer w-44 text-sm">
+
+            <!-- Botões Responsivos para Telemóvel -->
+            <div class="flex flex-wrap items-center justify-center gap-2 w-full sm:w-auto">
+                <button id="eggButton" onclick="hatchEgg()" class="bg-rose-500 text-white title-font px-4 py-2.5 rounded-2xl hover:bg-rose-600 transition inline-flex items-center justify-center gap-2 cursor-pointer flex-1 sm:flex-none text-sm shadow-md">
                     <span id="eggIcon">🥚</span> <span id="eggText">Jogar Agora!</span>
                 </button>
-                <button id="connectWalletBtn" class="bg-purple-500 text-white title-font px-3 py-3 rounded-2xl hover:bg-purple-700 transition inline-flex items-center justify-center gap-2 cursor-pointer w-44 text-sm">
+                <button id="connectWalletBtn" class="bg-purple-500 text-white title-font px-4 py-2.5 rounded-2xl hover:bg-purple-700 transition inline-flex items-center justify-center gap-2 cursor-pointer flex-1 sm:flex-none text-sm shadow-md">
                     <span>⚡</span> <span id="walletBtnText">Conectar Carteira</span>
                 </button>
             </div>
         </div>
     </header>
+
     <!-- HERO SECTION -->
-    <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-yellow-200 to-amber-300 border-b-8 border-amber-400">
+    <section class="relative overflow-hidden py-12 sm:py-20 bg-gradient-to-b from-yellow-200 to-amber-300 border-b-8 border-amber-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <span class="inline-block bg-white text-amber-600 text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 shadow-md border-2 border-amber-400">
+            <span class="inline-block bg-white text-amber-600 text-xs sm:text-sm font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4 shadow-md border-2 border-amber-400">
                 ✨ Batalhas Épicas, Caóticas e Fofinhas! 🥚
             </span>
-            <h1 class="title-font text-5xl sm:text-6xl lg:text-7xl text-amber-900 tracking-wide mb-6 drop-shadow-sm">
+
+            <h1 class="title-font text-3xl sm:text-6xl lg:text-7xl text-amber-900 tracking-wide mb-4 drop-shadow-sm">
                 A GUERRA MAIS <span class="text-rose-600">LOUCA</span> DO CURRAL!
             </h1>
-            <p class="max-w-2xl mx-auto text-xl font-bold text-amber-800 mb-10">
+            <p class="max-w-2xl mx-auto text-base sm:text-xl font-bold text-amber-800 mb-8 px-2">
                 Um jogo mobile de estratégia em tempo real super rápido! Escolhe as tuas galinhas guerreiras, defende o galinheiro e diverte-te em partidas de 3 minutinhos. 
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#modos" class="bg-amber-500 text-white title-font text-lg px-4 py-2 rounded-2xl fun-shadow hover:bg-amber-600 transition text-center">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4">
+                <a href="#modos" class="bg-amber-500 text-white title-font text-base sm:text-lg px-6 py-3 rounded-2xl fun-shadow hover:bg-amber-600 transition text-center shadow">
                     Ver Modos de Jogo 🎮
                 </a>
-                <a href="#apoiadores" class="bg-purple-600 text-white title-font text-lg px-4 py-2 rounded-2xl fun-shadow-pink hover:bg-purple-700 transition text-center">
+                <a href="#apoiadores" class="bg-purple-600 text-white title-font text-base sm:text-lg px-6 py-3 rounded-2xl fun-shadow-pink hover:bg-purple-700 transition text-center shadow">
                     Seja Membro Fundador 🌟
                 </a>
             </div>
@@ -61,57 +64,57 @@
     </section>
 
     <!-- SOBRE O PROJETO -->
-    <section id="sobre" class="py-20 bg-white">
+    <section id="sobre" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="title-font text-4xl text-amber-700 mb-4">Como Funciona o Jogo?</h2>
-                <p class="text-gray-600 font-bold text-lg">Ação rápida, muita comédia e estratégia na palma da mão.</p>
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl sm:text-4xl text-amber-700 mb-2">Como Funciona o Jogo?</h2>
+                <p class="text-gray-600 font-bold text-base sm:text-lg">Ação rápida, muita comédia e estratégia na palma da mão.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-yellow-50 p-8 rounded-3xl border-4 border-yellow-200 text-center shadow-lg">
-                    <div class="text-5xl mb-4">⏱️</div>
-                    <h3 class="title-font text-2xl text-amber-800 mb-2">Partidas Rápidas</h3>
-                    <p class="text-gray-600 font-medium">Apenas 3 minutos por batalha! Perfeito para jogar a qualquer hora e divertir toda a família.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-yellow-50 p-6 sm:p-8 rounded-3xl border-4 border-yellow-200 text-center shadow-lg">
+                    <div class="text-4xl sm:text-5xl mb-3">⏱️</div>
+                    <h3 class="title-font text-xl sm:text-2xl text-amber-800 mb-2">Partidas Rápidas</h3>
+                    <p class="text-gray-600 font-medium text-sm sm:text-base">Apenas 3 minutos por batalha! Perfeito para jogar a qualquer hora e divertir toda a família.</p>
                 </div>
-                <div class="bg-rose-50 p-8 rounded-3xl border-4 border-rose-200 text-center shadow-lg">
-                    <div class="text-5xl mb-4">🐔</div>
-                    <h3 class="title-font text-2xl text-rose-800 mb-2">Galinhas humanoides estilizadas para a guerra</h3>
-                    <p class="text-gray-600 font-medium">Personagens humanoides super engraçados, com falas malucas, armaduras divertidas e super poderes.</p>
+                <div class="bg-rose-50 p-6 sm:p-8 rounded-3xl border-4 border-rose-200 text-center shadow-lg">
+                    <div class="text-4xl sm:text-5xl mb-3">🐔</div>
+                    <h3 class="title-font text-xl sm:text-2xl text-rose-800 mb-2">Galinhas Humanoides</h3>
+                    <p class="text-gray-600 font-medium text-sm sm:text-base">Personagens super engraçados, com falas malucas, armaduras divertidas e super poderes.</p>
                 </div>
-                <div class="bg-sky-50 p-8 rounded-3xl border-4 border-sky-200 text-center shadow-lg">
-                    <div class="text-5xl mb-4">🌀</div>
-                    <h3 class="title-font text-2xl text-sky-800 mb-2">O Portal Mágico</h3>
-                    <p class="text-gray-600 font-medium">Um portal misterioso traz criaturas de outras dimensões e épocas para dentro da grande guerra das penas!</p>
+                <div class="bg-sky-50 p-6 sm:p-8 rounded-3xl border-4 border-sky-200 text-center shadow-lg">
+                    <div class="text-4xl sm:text-5xl mb-3">🌀</div>
+                    <h3 class="title-font text-xl sm:text-2xl text-sky-800 mb-2">O Portal Mágico</h3>
+                    <p class="text-gray-600 font-medium text-sm sm:text-base">Um portal misterioso traz criaturas de outras dimensões e épocas para dentro da grande guerra!</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- LORE & HISTÓRIA -->
-    <section id="lore" class="py-20 bg-amber-100/50">
+    <section id="lore" class="py-16 bg-amber-100/50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="title-font text-4xl text-amber-800 mb-4">A Grande História 📜</h2>
-                <p class="text-amber-700 font-bold">Capítulo 1 — Como Tudo Começou no Galinheiro</p>
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl sm:text-4xl text-amber-800 mb-2">A Grande História 📜</h2>
+                <p class="text-amber-700 font-bold text-sm sm:text-base">Capítulo 1 — Como Tudo Começou no Galinheiro</p>
             </div>
-            <div class="space-y-6 text-gray-700 font-medium text-lg bg-white p-8 sm:p-12 rounded-3xl border-4 border-amber-300 shadow-xl">
+            <div class="space-y-4 text-gray-700 font-medium text-base sm:text-lg bg-white p-6 sm:p-12 rounded-3xl border-4 border-amber-300 shadow-xl">
                 <p>
                     Num vilarejo super pacífico, as galinhas viviam a botar ovos e a aproveitar o sol sob o canto dos galos. Até que um belo dia... <strong class="text-amber-700">um raio misterioso caiu bem em cima do galinheiro!</strong> ⚡
                 </p>
                 <p>
                     De repente, todas ganharam superpoderes incríveis! Mas nem tudo foram rosas: logo se dividiram em duas fações muito barulhentas:
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-6">
-                    <div class="bg-yellow-100 border-4 border-yellow-300 p-6 rounded-2xl">
-                        <h4 class="title-font text-amber-800 text-xl mb-2">🟡 Galinhas Douradas</h4>
-                        <p class="text-sm text-gray-600 font-medium">Lideradas pela <strong>Imperatriz Clara</strong>, usam o poder da cura e da proteção para guardar o vilarejo.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                    <div class="bg-yellow-100 border-4 border-yellow-300 p-5 rounded-2xl">
+                        <h4 class="title-font text-amber-800 text-lg mb-1">🟡 Galinhas Douradas</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium">Lideradas pela <strong>Imperatriz Clara</strong>, usam o poder da cura e da proteção.</p>
                     </div>
-                    <div class="bg-purple-100 border-4 border-purple-300 p-6 rounded-2xl">
-                        <h4 class="title-font text-purple-800 text-xl mb-2">⚫ Galinhas Negras</h4>
-                        <p class="text-sm text-gray-600 font-medium">Lideradas pela <strong>Rainha Obsidiana</strong>, mandam no fogo e querem dominar todo o território! 🔥</p>
+                    <div class="bg-purple-100 border-4 border-purple-300 p-5 rounded-2xl">
+                        <h4 class="title-font text-purple-800 text-lg mb-1">⚫ Galinhas Negras</h4>
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium">Lideradas pela <strong>Rainha Obsidiana</strong>, mandam no fogo e querem dominar tudo! 🔥</p>
                     </div>
                 </div>
-                <p class="text-center text-rose-600 title-font text-xl pt-4">
+                <p class="text-center text-rose-600 title-font text-lg pt-2">
                     "A guerra cria o cenário... mas as galinhas criam a gargalhada!"
                 </p>
             </div>
@@ -119,52 +122,52 @@
     </section>
 
     <!-- MODOS DE JOGO -->
-    <section id="modos" class="py-20 bg-white">
+    <section id="modos" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="title-font text-4xl text-amber-700 mb-4">Modos de Batalha 🎮</h2>
-                <p class="text-gray-600 font-bold text-lg">Escolhe a tua arena favorita e entra na diversão</p>
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl sm:text-4xl text-amber-700 mb-2">Modos de Batalha 🎮</h2>
+                <p class="text-gray-600 font-bold text-base sm:text-lg">Escolhe a tua arena favorita e entra na diversão</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-emerald-50 p-8 rounded-3xl border-4 border-emerald-300 shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-emerald-50 p-6 sm:p-8 rounded-3xl border-4 border-emerald-300 shadow-lg">
                     <span class="bg-emerald-200 text-emerald-800 font-bold text-xs uppercase px-3 py-1 rounded-full">Modo Clássico</span>
-                    <h3 class="title-font text-2xl text-emerald-900 mt-4 mb-3">Guerra no Galinheiro</h3>
-                    <p class="text-gray-600 font-medium">Batalha em três caminhos! Invoque tropas fofinhas e destrua a base inimiga antes que cheguem à tua.</p>
+                    <h3 class="title-font text-xl sm:text-2xl text-emerald-900 mt-3 mb-2">Guerra no Galinheiro</h3>
+                    <p class="text-gray-600 font-medium text-sm sm:text-base">Batalha em três caminhos! Invoque tropas e destrua a base inimiga antes que cheguem a sua.</p>
                 </div>
-                <div class="bg-purple-50 p-8 rounded-3xl border-4 border-purple-300 shadow-lg">
+                <div class="bg-purple-50 p-6 sm:p-8 rounded-3xl border-4 border-purple-300 shadow-lg">
                     <span class="bg-purple-200 text-purple-800 font-bold text-xs uppercase px-3 py-1 rounded-full">Modo Surpresa</span>
-                    <h3 class="title-font text-2xl text-purple-900 mt-4 mb-3">Caixas & Armadilhas</h3>
-                    <p class="text-gray-600 font-medium">Caixas misteriosas espalhadas pelo mapa! Será um super presente ou uma pegadinha divertida? Cuidado!</p>
+                    <h3 class="title-font text-xl sm:text-2xl text-purple-900 mt-3 mb-2">Caixas & Armadilhas</h3>
+                    <p class="text-gray-600 font-medium text-sm sm:text-base">Caixas misteriosas espalhadas pelo mapa! Será um presente ou uma pegadinha? Cuidado!</p>
                 </div>
-                <div class="bg-sky-50 p-8 rounded-3xl border-4 border-sky-300 shadow-lg">
+                <div class="bg-sky-50 p-6 sm:p-8 rounded-3xl border-4 border-sky-300 shadow-lg">
                     <span class="bg-sky-200 text-sky-800 font-bold text-xs uppercase px-3 py-1 rounded-full">Modo Desafio</span>
-                    <h3 class="title-font text-2xl text-sky-900 mt-4 mb-3">Torneio das Penas</h3>
-                    <p class="text-gray-600 font-medium">Enfrenta jogadores do teu nível, sobe no ranking e ganha troféus lendários no galinheiro.</p>
+                    <h3 class="title-font text-xl sm:text-2xl text-sky-900 mt-3 mb-2">Torneio das Penas</h3>
+                    <p class="text-gray-600 font-medium text-sm sm:text-base">Enfrenta jogadores do seu nível, sobe no ranking e ganhe troféus lendários no galinheiro.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ABA: SEJA UM APOIADOR / MEMBRO FUNDADOR -->
-    <section id="apoiadores" class="py-20 bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500 border-t-8 border-amber-600 text-amber-950">
+    <section id="apoiadores" class="py-16 bg-gradient-to-br from-amber-400 via-yellow-300 to-amber-500 border-t-8 border-amber-600 text-amber-950">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="inline-block bg-white text-rose-600 text-sm font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 shadow-md border-2 border-rose-400">
+            <span class="inline-block bg-white text-rose-600 text-xs sm:text-sm font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4 shadow-md border-2 border-rose-400">
                 ⭐ Seja um Membro Fundador 🤝
             </span>
-            <h2 class="title-font text-4xl sm:text-5xl mb-6 text-amber-950">
+            <h2 class="title-font text-3xl sm:text-5xl mb-6 text-amber-950">
                 COLABORE E FAÇA PARTE DA HISTÓRIA!
             </h2>
-            <div class="bg-white/95 backdrop-blur-md p-8 sm:p-12 rounded-3xl border-4 border-amber-600 shadow-2xl text-left space-y-6">
-                <p class="text-lg font-bold text-gray-700 leading-relaxed text-center">
+            <div class="bg-white/95 backdrop-blur-md p-6 sm:p-12 rounded-3xl border-4 border-amber-600 shadow-2xl text-left space-y-4">
+                <p class="text-base sm:text-lg font-bold text-gray-700 leading-relaxed text-center">
                     Seja um apoiador ou membro fundador! Colabore com qualquer valor de doação de incentivo e obtenha <span class="text-rose-600">conteúdos exclusivos no lançamento</span>, bem como <span class="text-amber-600">skills ou baús lendários</span> de lançamento. Presenteie um parceiro e incentive o nosso trabalho!
                 </p>
-                <div class="bg-amber-50 border-3 border-amber-300 p-6 rounded-2xl text-center">
-                    <p class="text-sm font-bold text-amber-900">
-                        💡 <strong>Transparência total:</strong> Tudo o que arrecadarmos será investido diretamente no desenvolvimento do próprio projeto ou dividido entre a nossa equipa de criadores.
+                <div class="bg-amber-50 border-3 border-amber-300 p-4 rounded-2xl text-center">
+                    <p class="text-xs sm:text-sm font-bold text-amber-900">
+                        💡 <strong>Transparência total:</strong> Tudo o que arrecadarmos será investido diretamente no desenvolvimento do próprio projeto ou dividido entre a nossa equipa.
                     </p>
                 </div>
-                <div class="text-center pt-4">
-                    <a href="#apoiadores" onclick="alert('Obrigado pelo interesse! Em breve o sistema de apoio e doação via Solana/Pix estará ativado para o lançamento do Chicken Wars 🐔💛')" class="bg-rose-500 text-white title-font text-xl px-10 py-4 rounded-2xl fun-shadow-pink hover:bg-rose-600 transition inline-block">
+                <div class="text-center pt-2">
+                    <a href="#apoiadores" onclick="alert('Obrigado pelo interesse! Em breve o sistema de apoio e doação via Solana/Pix estará ativado para o lançamento do Chicken Wars 🐔💛')" class="bg-rose-500 text-white title-font text-lg px-8 py-3.5 rounded-2xl fun-shadow-pink hover:bg-rose-600 transition inline-block shadow">
                         Quero Apoiar o Projeto 🚀
                     </a>
                 </div>
@@ -173,7 +176,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-amber-400 border-t-8 border-amber-500 py-8 text-center text-amber-900 font-bold">
+    <footer class="bg-amber-400 border-t-8 border-amber-500 py-6 text-center text-amber-900 font-bold text-sm sm:text-base">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p>Feito com muita diversão pela equipe do Chicken Wars 🐔🔥</p>
         </div>
@@ -185,13 +188,11 @@
             const eggIcon = document.getElementById('eggIcon');
             const eggText = document.getElementById('eggText');
             
-            // Animação de estalido e troca para pinto/galinha a nascer
             eggIcon.innerText = "🐣";
             
             setTimeout(() => {
                 eggIcon.innerText = "🐔🔥";
                 eggText.innerText = "Bora Batalhar!";
-                // Rola suavemente até à seção "sobre"
                 document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' });
             }, 600);
         }
