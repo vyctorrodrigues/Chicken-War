@@ -32,9 +32,10 @@
                 <button id="eggButton" onclick="hatchEgg()" class="bg-rose-500 text-white title-font px-4 py-2.5 rounded-2xl hover:bg-rose-600 transition inline-flex items-center justify-center gap-2 cursor-pointer flex-1 sm:flex-none text-sm shadow-md">
                     <span id="eggIcon">🥚</span> <span id="eggText">Jogar Agora!</span>
                 </button>
-                <button id="connectWalletBtn" class="bg-purple-500 text-white title-font px-4 py-2.5 rounded-2xl hover:bg-purple-700 transition inline-flex items-center justify-center gap-2 cursor-pointer flex-1 sm:flex-none text-sm shadow-md">
-                    <span>⚡</span> <span id="walletBtnText">Conectar Carteira</span>
-                </button>
+                <!-- Botão Camuflado no Topo: Leva para a secção de apoiadores -->
+                <a href="#apoiadores" class="bg-purple-600 text-white title-font px-4 py-2.5 rounded-2xl hover:bg-purple-700 transition inline-flex items-center justify-center gap-2 cursor-pointer flex-1 sm:flex-none text-sm shadow-md text-center">
+                    <span>⭐</span> <span>Membro Fundador</span>
+                </a>
             </div>
         </div>
     </header>
@@ -163,12 +164,16 @@
                 </p>
                 <div class="bg-amber-50 border-3 border-amber-300 p-4 rounded-2xl text-center">
                     <p class="text-xs sm:text-sm font-bold text-amber-900">
-                        💡 <strong>Transparência total:</strong> Tudo o que arrecadarmos será investido diretamente no desenvolvimento do próprio projeto ou dividido entre a nossa equipa.
+                        💡 <strong>Transparência total:</strong> Tudo o que arrecadarmos será investido diretamente no desenvolvimento do próprio projeto ou dividido entre a nossa equipe.
                     </p>
                 </div>
-                <div class="text-center pt-2">
-                    <a href="#apoiadores" onclick="alert('Obrigado pelo interesse! Em breve o sistema de apoio e doação via Solana/Pix estará ativado para o lançamento do Chicken Wars 🐔💛')" class="bg-rose-500 text-white title-font text-lg px-8 py-3.5 rounded-2xl fun-shadow-pink hover:bg-rose-600 transition inline-block shadow">
-                        Quero Apoiar o Projeto 🚀
+                <!-- Botões de Ação na Área de Apoiadores (Conexão real da carteira aqui embaixo) -->
+                <div class="text-center pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <button id="connectWalletBtn" class="bg-purple-600 text-white title-font text-base sm:text-lg px-8 py-3.5 rounded-2xl hover:bg-purple-700 transition inline-flex items-center justify-center gap-2 shadow cursor-pointer">
+                        ⚡ <span id="walletBtnText">Conectar Carteira e Apoiar</span>
+                    </button>
+                    <a href="https://phantom.app/" target="_blank" class="bg-white text-purple-700 border-2 border-purple-600 title-font text-base sm:text-lg px-6 py-3.5 rounded-2xl hover:bg-purple-50 transition inline-flex items-center justify-center gap-2 shadow text-center">
+                        🦊 Como criar uma carteira?
                     </a>
                 </div>
             </div>
